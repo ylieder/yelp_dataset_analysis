@@ -3,11 +3,11 @@ import pickle
 import re
 from datetime import timedelta
 import random
-from typing import List, Optional, Tuple
+from typing import Optional
 from timeit import default_timer as timer
 
 
-from YelpDataset import Gender, GenderGuesser
+from GenderGuesser import Gender, GenderGuesser
 
 
 class GenderPredictionData:
@@ -15,8 +15,6 @@ class GenderPredictionData:
     Manages data for gender prediction tasks in sense of pickling, unpickling, reading from JSON, shuffling,
     transforming.
     """
-    #data: Optional[List[Tuple[int, List[str]]]]
-    #verbose: bool
 
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
