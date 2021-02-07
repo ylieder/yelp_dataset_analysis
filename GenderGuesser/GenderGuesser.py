@@ -1,13 +1,7 @@
-from enum import Enum
 from pathlib import Path
 from typing import Optional, Set, Union
 
-
-class Gender(Enum):
-    F = 0        # Female
-    M = 1        # Male
-    BOTH = 2     # Female and Male
-    UNKNOWN = 3  # Unknown
+from .Gender import Gender
 
 
 class GenderGuesser:
