@@ -5,7 +5,7 @@ from pathlib import Path
 from timeit import default_timer as timer
 from typing import Any, Dict, List, Union, TYPE_CHECKING
 
-from sqlalchemy import create_engine, Table
+from sqlalchemy import create_engine, Index, Table
 from sqlalchemy.exc import OperationalError
 
 if TYPE_CHECKING:
@@ -43,6 +43,14 @@ def create_sqlite_db(connection_string: str, data_dir: Union[str, Path]) -> None
         business_mapping,
         user_mapping,
     )
+
+    print("Create indices", end=' ')
+    review_user_idx = Index('review_user_idx', YelpReview.user_id)
+    review_user_idx.create(bind=engine)
+    print('#', end='')
+    review_business_idx = Index('review_business_idx', YelpReview.business)
+    review_business_idx.create(bind=engine)
+    print('#')
 
 
 def _insert_data(engine: Engine, table: Union[Table, Base], buffer: List[Dict[str, Any]]) -> None:

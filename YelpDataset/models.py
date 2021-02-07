@@ -11,8 +11,8 @@ Relation table between Yelp categories and Yelp businesses.
 """
 YelpCategoryBusinessRel = Table(
     'business_category_rel', Base.metadata,
-    Column('business_id', String, ForeignKey('business.id')),
-    Column('category_id', Integer, ForeignKey('category.id')),
+    Column('business_id', String, ForeignKey('business.id'), index=True),
+    Column('category_id', Integer, ForeignKey('category.id'), index=True),
 )
 
 
@@ -104,6 +104,7 @@ class YelpReview(Base):
     cool = Column(Integer)
     text = Column(String)
     date = Column(Date)
+    language = Column(String)
 
     user_id = Column(Integer, ForeignKey(YelpUser.id))
     business_id = Column(Integer, ForeignKey(YelpBusiness.id))
