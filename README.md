@@ -32,7 +32,7 @@ Reviews / User | Params 1 | Params 2
 1. Download and run `jupyter/scipy-notebook` Docker stack **from inside the project 
    root directory**:
    ```
-   docker run -p 8888:8888 -v "$PWD":/home/jovyan/work \
+   docker run --rm -p 8888:8888 -v "$PWD":/home/jovyan/work \
    jupyter/scipy-notebook:016833b15ceb
    ```
    *Remark*: Ensure that the Docker container has permissions to bind to the project
