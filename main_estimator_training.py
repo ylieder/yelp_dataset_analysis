@@ -17,7 +17,7 @@ def train_gender_estimator(n_reviews, max_features):
     :param max_features: Maximum number of features.
     """
     data_dir = Path('data')
-    dataset_path = data_dir / f'dataset_{n_reviews}_train.pkl'
+    dataset_path = data_dir / f'datasets/dataset_{n_reviews}_train.pkl'
     estimator_dir = data_dir / 'estimators'
     estimator_dir.mkdir(exist_ok=True)
 
