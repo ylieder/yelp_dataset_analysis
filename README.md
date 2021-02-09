@@ -20,6 +20,11 @@
   ```
   jupyter notebook data_preparation.ipynb  
   ```
+- **Hyperparameter optimization**: Run an extensive grid search on the created datasets 
+  (truncated to 20000 samples each). The best parameters are outputted to stdout.
+  ```
+  python3 main_parameter_optimization.py
+  ```
 - **Train an estimator**: Run the python script `main_estimator_training.py` in order
   to train a gender estimator. The estimator is exported to `data/estimators/` 
   ```
