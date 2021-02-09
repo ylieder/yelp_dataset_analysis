@@ -35,7 +35,7 @@
 - **Compute and visualize accuracy of estimators**: Open the notebook 
   `estimator_comparison.ipynb` and execute the cells.
   ```
-  jupyter notebook estimator_comparison.ipynb  
+  jupyter notebook estimator_evaluation.ipynb  
   ```
 
 ## SQLite database
