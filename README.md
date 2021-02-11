@@ -5,7 +5,7 @@ on her written reviews.
 
 *Remark*: The pipeline computes estimators for six different settings, which could take
 some time to compute. My results were reached with datasets of size 80,000 users and a 
-maximum feature size of 10,000 features, but much smaller training parameters yield
+maximum number of features of 10,000, but much smaller training parameters yield
 almost the same accuracies:
 
 - *Params 1:* 80,000 samples (users), 10,000 Features
